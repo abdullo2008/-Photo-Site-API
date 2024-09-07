@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+
+
+<form method="POST">{% csrf_token %}
+    <h2>Do you want to delete the photo?</h2>
+
+    <input type="submit" class="btn btn-primary mt-4 ms-2" value="Delete">
+    <a href="{% url 'index' %}" style="margin-left: 10px;">Cancel</a>
+</form>
+
+{% endblock content %}
